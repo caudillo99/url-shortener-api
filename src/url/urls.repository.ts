@@ -28,7 +28,7 @@ export class UrlsRepository extends Repository<Url> {
   }
 
   async createShortenerUrl(shortenerUrl: ShortenerUrlDto): Promise<Url> {
-    const baseUrl = 'http:localhost:3000';
+    const baseUrl = 'http://localhost:5000';
     const { redirect } = shortenerUrl;
     const urlCode = Math.random().toString(36).slice(-8);
     const shortUrl = `${baseUrl}/${urlCode}`;
